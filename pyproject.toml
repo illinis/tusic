@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tusic"
+version = "0.3.0"
+description = "A simple, offline music practice app for Windows and Linux"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "sounddevice>=0.5.4,<0.6"]
+
+[project.gui-scripts]
+tusic = "tusic.app:main"
+
+[tool.setuptools.packages.find]
+include = ["tusic*"]
+
+[tool.setuptools.package-data]
+tusic = ["instruments/*.json"]
