@@ -1,0 +1,9 @@
+{
+  "id": "violin_standard",
+  "name": "Violin (standard tuning)",
+  "tuning": ["G3", "D4", "A4", "E5"],
+  "fret_count": 12,
+  "markers": [],
+  "double_markers": [],
+  "fretted": false
+}

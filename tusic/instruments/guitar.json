@@ -1,0 +1,9 @@
+{
+  "id": "guitar_standard",
+  "name": "Guitar (standard tuning)",
+  "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+  "fret_count": 12,
+  "markers": [3, 5, 7, 9, 12],
+  "double_markers": [12],
+  "fretted": true
+}
