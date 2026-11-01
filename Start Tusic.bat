@@ -1,5 +1,9 @@
 @echo off
 cd /d "%~dp0"
+if exist "%~dp0dist\v0.3.1\Tusic.exe" (
+    start "" "%~dp0dist\v0.3.1\Tusic.exe"
+    exit /b 0
+)
 if exist "%~dp0dist\v0.3.0\Tusic.exe" (
     start "" "%~dp0dist\v0.3.0\Tusic.exe"
     exit /b 0

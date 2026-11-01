@@ -10,7 +10,7 @@ network connection is needed to practice.
 ## Start practicing
 
 **Windows:** double-click `Tusic.exe` in the Windows download. In this project,
-the latest executable is in `dist/v0.3.0/Tusic.exe`; `Start Tusic.bat` also launches it.
+the latest executable is in `dist/v0.3.1/Tusic.exe`; `Start Tusic.bat` also launches it.
 The executable includes Python, Tkinter, NumPy, and PortAudio audio support.
 If an older version is already running, finish your match and close it before
 opening the updated app. Both versions use the same settings and score folder.
@@ -77,7 +77,8 @@ not represent all regional cavaquinho tunings.
 Tuning references: [Yamaha violin manual](https://europe.yamaha.com/files/download/other_assets/0/313360/02_violin_E_0702.pdf)
 and [Cavaqui's cavaquinho tuner](https://cavaqui.app/).
 
-No note names are shown on the board until you answer. Equivalent sharps and flats both count as correct:
+Open-string note names are always shown to the left of each fretboard for reference.
+The highlighted position's note is revealed after answering. Equivalent sharps and flats both count as correct:
 `C#` and `Db`, for example. Letter case and Unicode ♯/♭ are accepted.
 
 Positions are shuffled without repetition until every position in the chosen
@@ -258,7 +259,7 @@ python -m pip install -r requirements-build.txt
 python tools/build.py
 ```
 
-The output is `dist/v0.3.0/Tusic.exe` on Windows and `dist/v0.3.0/Tusic` on Linux. PyInstaller
+The output is `dist/v0.3.1/Tusic.exe` on Windows and `dist/v0.3.1/Tusic` on Linux. PyInstaller
 builds for the operating system it runs on; the Windows build is not a Linux
 binary. Runtime dependencies are NumPy and sounddevice (using PortAudio), plus
 the standard library. PyInstaller is only a build dependency.

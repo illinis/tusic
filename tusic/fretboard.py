@@ -25,7 +25,7 @@ class Fretboard(tk.Canvas):
         self.delete("all")
         width, height = max(self.winfo_width(), 300), max(self.winfo_height(), 170)
         instrument = self.instrument
-        left, right, top, bottom = 94, width - 30, 42, height - 48
+        left, right, top, bottom = 128, width - 30, 42, height - 48
         step = (right - left) / instrument.fret_count
         string_gap = (bottom - top) / max(1, instrument.string_count - 1)
         string_y = lambda number: ((top + bottom) / 2 if instrument.string_count == 1
@@ -61,6 +61,7 @@ class Fretboard(tk.Canvas):
                              width=4 if fret == 0 else 1,
                              dash=() if instrument.fretted or fret == 0 else (2, 4))
         self.create_text(26, 17, text="STRING", font=("TkDefaultFont", 8), fill="#555555")
+        self.create_text(64, 17, text="NOTE", font=("TkDefaultFont", 8), fill="#555555")
         self.create_text(fret_x(0), height - 24, text="Open\n0", font=("TkDefaultFont", 9))
         if not instrument.fretted:
             self.create_text((left + right) / 2, 17, text="SEMITONES ABOVE OPEN · DOTTED GUIDES, NO FRETS",
@@ -73,6 +74,8 @@ class Fretboard(tk.Canvas):
             self.create_line(left - 43, y, right, y, fill="#555555",
                              width=1 + 2 * (number - 1) / max(1, instrument.string_count - 1))
             self.create_text(26, y, text=str(number), font=("TkDefaultFont", 10))
+            self.create_text(64, y, text=instrument.tuning[-number][:-1],
+                             font=("TkDefaultFont", 10, "bold"), tags="open-string-note")
 
         if self.position:
             x, y = fret_x(self.position.fret), string_y(self.position.string_number)

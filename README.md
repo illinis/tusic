@@ -6,7 +6,7 @@ scores stay on your computer. Includes guitar, violin, and Brazilian cavaquinho.
 ## Run the app
 
 **Windows:** open the downloaded `Tusic.exe`. If you have the local build,
-double-click `Start Tusic.bat` or `dist/v0.3.0/Tusic.exe`. The executable includes
+double-click `Start Tusic.bat` or `dist/v0.3.1/Tusic.exe`. The executable includes
 its dependencies; it is not stored in Git.
 
 **From source:** use Python 3.10+ with Tkinter and install the dependencies once.
@@ -43,7 +43,8 @@ click **Start match**. Check the feedback after each answer and continue with
 
 Written theory answers require correct spelling: G major uses `F#`, not `Gb`.
 Use `#` for sharps and `b` for flats. The fretboard note quiz accepts equivalent
-spellings. Violin lines are semitone learning guides, not physical frets.
+spellings. Every fretboard shows its open-string notes on the left for reference.
+Violin lines are semitone learning guides, not physical frets.
 
 For singing, use headphones and a quiet room. The default goal is to stay within
 ±35 cents for 0.8 seconds (100 cents is one semitone), within a ten-second attempt.
